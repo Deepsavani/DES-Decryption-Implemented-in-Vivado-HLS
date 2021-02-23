@@ -5,7 +5,6 @@
 -Baseline design has average latency = 5109
 
 ##Different Pragmas used:
->Combinations of these Pragmas have also been shown to show how latency and resource utilisation can be optimised.
 -Loop Unrolling
 -Loop Pipelining 
 -Task Level Pipelining (Dataflow & Stream Pragma)
@@ -13,3 +12,4 @@
 -Array Map
 -Loop Flatten & Loop Merge
 -Kernel Optimisation (Allocation & Resource Pragma)
+>Combinations of these Pragmas have also been shown to show how latency and resource utilisation can be optimised.
