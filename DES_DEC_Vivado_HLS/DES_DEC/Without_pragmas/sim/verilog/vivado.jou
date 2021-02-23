@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Dec 19 16:39:38 2020
+# Process ID: 9016
+# Current directory: C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/solution1/sim/verilog/vivado.log
+# Journal file: C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/solution1/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+open_wave_config C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/solution1/sim/verilog/des_dec.wcfg

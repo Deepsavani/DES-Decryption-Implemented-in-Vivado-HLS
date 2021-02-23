@@ -1,0 +1,139 @@
+
+
+================================================================
+== Vivado HLS Report for 'des_dec_entry7'
+================================================================
+* Date:           Tue Dec 22 19:03:30 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        DES_DEC
+* Solution:       Dataflow_DES
+* Product family: artix7
+* Target device:  xc7a35tl-cpg236-2L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.187|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
++-----------------+---------+-------+-------+-------+-----+
+|DSP              |        -|      -|      -|      -|    -|
+|Expression       |        -|      -|      0|      2|    -|
+|FIFO             |        -|      -|      -|      -|    -|
+|Instance         |        -|      -|      -|      -|    -|
+|Memory           |        -|      -|      -|      -|    -|
+|Multiplexer      |        -|      -|      -|     36|    -|
+|Register         |        -|      -|      3|      -|    -|
++-----------------+---------+-------+-------+-------+-----+
+|Total            |        0|      0|      3|     38|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Available        |      100|     90|  41600|  20800|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0  |   ~0  |    0|
++-----------------+---------+-------+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1  |    or    |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |Total            |          |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+----+-----------+-----+-----------+
+    |       Name      | LUT| Input Size| Bits| Total Bits|
+    +-----------------+----+-----------+-----+-----------+
+    |ap_done          |   9|          2|    1|          2|
+    |input_out_blk_n  |   9|          2|    1|          2|
+    |key_out_blk_n    |   9|          2|    1|          2|
+    |real_start       |   9|          2|    1|          2|
+    +-----------------+----+-----------+-----+-----------+
+    |Total            |  36|          8|    4|          8|
+    +-----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |ap_CS_fsm       |  1|   0|    1|          0|
+    |ap_done_reg     |  1|   0|    1|          0|
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  3|   0|    3|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+----------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++------------------+-----+-----+------------+----------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs | des_dec.entry7 | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | des_dec.entry7 | return value |
+|ap_start          |  in |    1| ap_ctrl_hs | des_dec.entry7 | return value |
+|start_full_n      |  in |    1| ap_ctrl_hs | des_dec.entry7 | return value |
+|ap_done           | out |    1| ap_ctrl_hs | des_dec.entry7 | return value |
+|ap_continue       |  in |    1| ap_ctrl_hs | des_dec.entry7 | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | des_dec.entry7 | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | des_dec.entry7 | return value |
+|start_out         | out |    1| ap_ctrl_hs | des_dec.entry7 | return value |
+|start_write       | out |    1| ap_ctrl_hs | des_dec.entry7 | return value |
+|input_r           |  in |   64|   ap_none  |     input_r    |    scalar    |
+|key               |  in |   64|   ap_none  |       key      |    scalar    |
+|input_out_din     | out |   64|   ap_fifo  |    input_out   |    pointer   |
+|input_out_full_n  |  in |    1|   ap_fifo  |    input_out   |    pointer   |
+|input_out_write   | out |    1|   ap_fifo  |    input_out   |    pointer   |
+|key_out_din       | out |   64|   ap_fifo  |     key_out    |    pointer   |
+|key_out_full_n    |  in |    1|   ap_fifo  |     key_out    |    pointer   |
+|key_out_write     | out |    1|   ap_fifo  |     key_out    |    pointer   |
++------------------+-----+-----+------------+----------------+--------------+
+

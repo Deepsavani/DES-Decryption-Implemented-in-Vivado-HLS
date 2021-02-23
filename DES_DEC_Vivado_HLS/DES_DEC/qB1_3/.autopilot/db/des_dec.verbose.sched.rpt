@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vivado HLS Report for 'des_dec'
+================================================================
+* Date:           Wed Dec 23 13:51:47 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        DES_DEC
+* Solution:       q21_3
+* Product family: artix7
+* Target device:  xc7a35tl-cpg236-2L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.690|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+----------+
+    |   Latency   |   Interval  | Pipeline |
+    |  min |  max |  min |  max |   Type   |
+    +------+------+------+------+----------+
+    |  4984|  4984|  3154|  3154| dataflow |
+    +------+------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 7, States = { 1 2 3 4 5 6 7 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.18>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%key_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %key) nounwind" [desDecrypt.c:14]   --->   Operation 8 'read' 'key_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%input_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %input_r) nounwind" [desDecrypt.c:14]   --->   Operation 9 'read' 'input_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%key_c = alloca i64, align 8" [desDecrypt.c:14]   --->   Operation 10 'alloca' 'key_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%input_c = alloca i64, align 8" [desDecrypt.c:14]   --->   Operation 11 'alloca' 'input_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%sub_key = alloca [16 x i64], align 16" [desDecrypt.c:32]   --->   Operation 12 'alloca' 'sub_key' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (3.18ns)   --->   "call fastcc void @des_dec.entry7(i64 %input_read, i64 %key_read, i64* %input_c, i64* %key_c) nounwind" [desDecrypt.c:15]   --->   Operation 13 'call' <Predicate = true> <Delay = 3.18> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 14 [2/2] (0.00ns)   --->   "%init_perm_res_0_loc_s = call fastcc i64 @Loop_unroll1_proc(i64* %input_c) nounwind" [desDecrypt.c:14]   --->   Operation 14 'call' 'init_perm_res_0_loc_s' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_2 : Operation 15 [2/2] (0.00ns)   --->   "%call_ret = call fastcc { i64, i60 } @Loop_unroll2_proc(i64* %key_c) nounwind" [desDecrypt.c:14]   --->   Operation 15 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.45>
+ST_3 : Operation 16 [1/2] (0.00ns)   --->   "%init_perm_res_0_loc_s = call fastcc i64 @Loop_unroll1_proc(i64* %input_c) nounwind" [desDecrypt.c:14]   --->   Operation 16 'call' 'init_perm_res_0_loc_s' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_3 : Operation 17 [1/2] (0.00ns)   --->   "%call_ret = call fastcc { i64, i60 } @Loop_unroll2_proc(i64* %key_c) nounwind" [desDecrypt.c:14]   --->   Operation 17 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%permuted_choice_1_0_s = extractvalue { i64, i60 } %call_ret, 0" [desDecrypt.c:14]   --->   Operation 18 'extractvalue' 'permuted_choice_1_0_s' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%permuted_choice_1_0_1 = extractvalue { i64, i60 } %call_ret, 1" [desDecrypt.c:14]   --->   Operation 19 'extractvalue' 'permuted_choice_1_0_1' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_3 : Operation 20 [2/2] (1.45ns)   --->   "call fastcc void @Loop_loop3_proc(i60 %permuted_choice_1_0_1, i64 %permuted_choice_1_0_s, [16 x i64]* %sub_key) nounwind" [desDecrypt.c:14]   --->   Operation 20 'call' <Predicate = true> <Delay = 1.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 21 [1/2] (0.00ns)   --->   "call fastcc void @Loop_loop3_proc(i60 %permuted_choice_1_0_1, i64 %permuted_choice_1_0_s, [16 x i64]* %sub_key) nounwind" [desDecrypt.c:14]   --->   Operation 21 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 1.35>
+ST_5 : Operation 22 [1/1] (0.00ns)   --->   "%call_ret1 = call fastcc { i32, i32 } @Block_des_dec_.exit2(i64 %init_perm_res_0_loc_s) nounwind" [desDecrypt.c:14]   --->   Operation 22 'call' 'call_ret1' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 23 [1/1] (0.00ns)   --->   "%L_loc_channel = extractvalue { i32, i32 } %call_ret1, 0" [desDecrypt.c:14]   --->   Operation 23 'extractvalue' 'L_loc_channel' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%R_loc_channel = extractvalue { i32, i32 } %call_ret1, 1" [desDecrypt.c:14]   --->   Operation 24 'extractvalue' 'R_loc_channel' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_5 : Operation 25 [2/2] (1.35ns)   --->   "%call_ret2 = call fastcc { i32, i32 } @Loop_Pipeline_loop4_(i32 %R_loc_channel, i32 %L_loc_channel, [16 x i64]* %sub_key) nounwind" [desDecrypt.c:14]   --->   Operation 25 'call' 'call_ret2' <Predicate = true> <Delay = 1.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 26 [1/2] (0.00ns)   --->   "%call_ret2 = call fastcc { i32, i32 } @Loop_Pipeline_loop4_(i32 %R_loc_channel, i32 %L_loc_channel, [16 x i64]* %sub_key) nounwind" [desDecrypt.c:14]   --->   Operation 26 'call' 'call_ret2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%temp_loc_channel = extractvalue { i32, i32 } %call_ret2, 0" [desDecrypt.c:14]   --->   Operation 27 'extractvalue' 'temp_loc_channel' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%L_0_loc_channel = extractvalue { i32, i32 } %call_ret2, 1" [desDecrypt.c:14]   --->   Operation 28 'extractvalue' 'L_0_loc_channel' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_6 : Operation 29 [2/2] (0.00ns)   --->   "%inv_init_perm_res_0_s = call fastcc i64 @Loop_loop5_proc(i32 %temp_loc_channel, i32 %L_0_loc_channel) nounwind" [desDecrypt.c:14]   --->   Operation 29 'call' 'inv_init_perm_res_0_s' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str1) nounwind" [desDecrypt.c:15]   --->   Operation 30 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %input_r) nounwind, !map !8"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %key) nounwind, !map !14"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 0) nounwind, !map !18"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @des_dec_str) nounwind"   --->   Operation 34 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResourceLimit(i32 0, [5 x i8]* @p_str, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [desDecrypt.c:15]   --->   Operation 35 'specresourcelimit' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([8 x i8]* @input_c_str, i32 1, [1 x i8]* @p_str20, [1 x i8]* @p_str20, i32 2, i32 0, i64* %input_c, i64* %input_c) nounwind" [desDecrypt.c:14]   --->   Operation 36 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "%empty_13 = call i32 (...)* @_ssdm_op_SpecInterface(i64* %input_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str22, [1 x i8]* @p_str23, [1 x i8]* @p_str24, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str25, [1 x i8]* @p_str26) nounwind" [desDecrypt.c:14]   --->   Operation 37 'specinterface' 'empty_13' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%empty_14 = call i32 (...)* @_ssdm_op_SpecChannel([6 x i8]* @key_c_str, i32 1, [1 x i8]* @p_str27, [1 x i8]* @p_str27, i32 2, i32 0, i64* %key_c, i64* %key_c) nounwind" [desDecrypt.c:14]   --->   Operation 38 'specchannel' 'empty_14' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecInterface(i64* %key_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str28, i32 0, i32 0, [1 x i8]* @p_str29, [1 x i8]* @p_str30, [1 x i8]* @p_str31, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str32, [1 x i8]* @p_str33) nounwind" [desDecrypt.c:14]   --->   Operation 39 'specinterface' 'empty_15' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 40 [1/2] (0.00ns)   --->   "%inv_init_perm_res_0_s = call fastcc i64 @Loop_loop5_proc(i32 %temp_loc_channel, i32 %L_0_loc_channel) nounwind" [desDecrypt.c:14]   --->   Operation 40 'call' 'inv_init_perm_res_0_s' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.18> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "%tmp = call fastcc i64 @__desDecrypt.c_line2(i64 %inv_init_perm_res_0_s) nounwind" [desDecrypt.c:274]   --->   Operation 41 'call' 'tmp' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "ret i64 %tmp" [desDecrypt.c:274]   --->   Operation 42 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.19ns
+The critical path consists of the following:
+	wire read on port 'key' (desDecrypt.c:14) [10]  (0 ns)
+	'call' operation ('call_ln15', desDecrypt.c:15) to 'des_dec.entry7' [25]  (3.19 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.45ns
+The critical path consists of the following:
+	'call' operation ('call_ret', desDecrypt.c:14) to 'Loop_unroll2_proc' [30]  (0 ns)
+	'call' operation ('call_ln14', desDecrypt.c:14) to 'Loop_loop3_proc' [33]  (1.45 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 1.35ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', desDecrypt.c:14) to 'Block_des_dec_.exit2' [27]  (0 ns)
+	'call' operation ('call_ret2', desDecrypt.c:14) to 'Loop_Pipeline_loop4_' [34]  (1.35 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'des_dec'" level="0">
+<item name = "Date">Wed Dec 23 14:16:38 2020
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">DES_DEC</item>
+<item name = "Solution">q21_6</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35tl-cpg236-2L</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.117, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">166, 166, 67, 67, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_Loop_Pipeline_loop4_s_fu_88">Loop_Pipeline_loop4_s, 20, 20, 20, 20, none</column>
+<column name="grp_Loop_loop5_proc_fu_97">Loop_loop5_proc, 66, 66, 66, 66, none</column>
+<column name="grp_Loop_unroll1_proc_fu_105">Loop_unroll1_proc, 66, 66, 66, 66, none</column>
+<column name="grp_Loop_unroll2_proc_fu_112">Loop_unroll2_proc, 58, 58, 58, 58, none</column>
+<column name="grp_Loop_loop3_proc_fu_119">Loop_loop3_proc, 18, 18, 18, 18, none</column>
+<column name="call_ret1_Block_des_dec_exit2_fu_126">Block_des_dec_exit2, 0, 0, 0, 0, none</column>
+<column name="call_ln15_des_dec_entry7_fu_131">des_dec_entry7, 0, 0, 0, 0, none</column>
+<column name="tmp_p_desDecrypt_c_line2_fu_141">p_desDecrypt_c_line2, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

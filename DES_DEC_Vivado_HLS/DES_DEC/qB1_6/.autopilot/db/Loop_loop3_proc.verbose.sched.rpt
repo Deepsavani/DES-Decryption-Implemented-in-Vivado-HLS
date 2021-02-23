@@ -1,0 +1,242 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_loop3_proc'
+================================================================
+* Date:           Wed Dec 23 14:16:37 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        DES_DEC
+* Solution:       q21_6
+* Product family: artix7
+* Target device:  xc7a35tl-cpg236-2L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     2.020|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   18|   18|   18|   18|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- loop3   |   16|   16|         2|          1|          1|    16|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 4 3 
+3 --> 2 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.45>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%C_3 = alloca i28"   --->   Operation 5 'alloca' 'C_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%D = alloca i28"   --->   Operation 6 'alloca' 'D' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read_4 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %p_read1)" [desDecrypt.c:188]   --->   Operation 7 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read_5 = call i60 @_ssdm_op_Read.ap_auto.i60(i60 %p_read)" [desDecrypt.c:188]   --->   Operation 8 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%C = call i28 @_ssdm_op_PartSelect.i28.i60.i32.i32(i60 %p_read_5, i32 28, i32 55)" [desDecrypt.c:188]   --->   Operation 9 'partselect' 'C' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%D_3 = trunc i64 %p_read_4 to i28" [desDecrypt.c:189]   --->   Operation 10 'trunc' 'D_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.45ns)   --->   "store i28 %D_3, i28* %D" [desDecrypt.c:192]   --->   Operation 11 'store' <Predicate = true> <Delay = 1.45>
+ST_1 : Operation 12 [1/1] (1.45ns)   --->   "store i28 %C, i28* %C_3" [desDecrypt.c:192]   --->   Operation 12 'store' <Predicate = true> <Delay = 1.45>
+ST_1 : Operation 13 [1/1] (1.35ns)   --->   "br label %0" [desDecrypt.c:192]   --->   Operation 13 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 2.01>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%i_2_i = phi i5 [ 0, %entry ], [ %i, %loop3_end ]"   --->   Operation 14 'phi' 'i_2_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (1.21ns)   --->   "%icmp_ln192 = icmp eq i5 %i_2_i, -16" [desDecrypt.c:192]   --->   Operation 15 'icmp' 'icmp_ln192' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind"   --->   Operation 16 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (1.54ns)   --->   "%i = add i5 %i_2_i, 1" [desDecrypt.c:192]   --->   Operation 17 'add' 'i' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "br i1 %icmp_ln192, label %Loop_loop3_proc.exit, label %loop3_begin" [desDecrypt.c:192]   --->   Operation 18 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%C_3_load = load i28* %C_3" [desDecrypt.c:197]   --->   Operation 19 'load' 'C_3_load' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%D_load = load i28* %D" [desDecrypt.c:198]   --->   Operation 20 'load' 'D_load' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (1.21ns)   --->   "%empty_848 = icmp eq i5 %i_2_i, 15" [desDecrypt.c:192]   --->   Operation 21 'icmp' 'empty_848' <Predicate = (!icmp_ln192)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (1.21ns)   --->   "%empty_849 = icmp eq i5 %i_2_i, 8" [desDecrypt.c:192]   --->   Operation 22 'icmp' 'empty_849' <Predicate = (!icmp_ln192)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node empty_854)   --->   "%empty_850 = or i1 %empty_849, %empty_848" [desDecrypt.c:192]   --->   Operation 23 'or' 'empty_850' <Predicate = (!icmp_ln192)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (1.21ns)   --->   "%empty_851 = icmp eq i5 %i_2_i, 1" [desDecrypt.c:192]   --->   Operation 24 'icmp' 'empty_851' <Predicate = (!icmp_ln192)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns) (grouped into LUT with out node empty_854)   --->   "%empty_852 = or i1 %empty_851, %empty_850" [desDecrypt.c:192]   --->   Operation 25 'or' 'empty_852' <Predicate = (!icmp_ln192)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (1.21ns)   --->   "%empty_853 = icmp eq i5 %i_2_i, 0" [desDecrypt.c:192]   --->   Operation 26 'icmp' 'empty_853' <Predicate = (!icmp_ln192)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (0.80ns) (out node of the LUT)   --->   "%empty_854 = or i1 %empty_853, %empty_852" [desDecrypt.c:192]   --->   Operation 27 'or' 'empty_854' <Predicate = (!icmp_ln192)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "br i1 %empty_854, label %._crit_edge14.i, label %1" [desDecrypt.c:192]   --->   Operation 28 'br' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%trunc_ln203 = trunc i28 %C_3_load to i26" [desDecrypt.c:203]   --->   Operation 29 'trunc' 'trunc_ln203' <Predicate = (!icmp_ln192 & !empty_854)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%trunc_ln204 = trunc i28 %D_load to i26" [desDecrypt.c:204]   --->   Operation 30 'trunc' 'trunc_ln204' <Predicate = (!icmp_ln192 & !empty_854)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_4 = call i2 @_ssdm_op_PartSelect.i2.i28.i32.i32(i28 %C_3_load, i32 26, i32 27)" [desDecrypt.c:203]   --->   Operation 31 'partselect' 'tmp_4' <Predicate = (!icmp_ln192 & !empty_854)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%C_1 = call i28 @_ssdm_op_BitConcatenate.i28.i26.i2(i26 %trunc_ln203, i2 %tmp_4)" [desDecrypt.c:203]   --->   Operation 32 'bitconcatenate' 'C_1' <Predicate = (!icmp_ln192 & !empty_854)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_5 = call i2 @_ssdm_op_PartSelect.i2.i28.i32.i32(i28 %D_load, i32 26, i32 27)" [desDecrypt.c:204]   --->   Operation 33 'partselect' 'tmp_5' <Predicate = (!icmp_ln192 & !empty_854)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%D_1 = call i28 @_ssdm_op_BitConcatenate.i28.i26.i2(i26 %trunc_ln204, i2 %tmp_5)" [desDecrypt.c:204]   --->   Operation 34 'bitconcatenate' 'D_1' <Predicate = (!icmp_ln192 & !empty_854)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (1.45ns)   --->   "store i28 %D_1, i28* %D" [desDecrypt.c:204]   --->   Operation 35 'store' <Predicate = (!icmp_ln192 & !empty_854)> <Delay = 1.45>
+ST_2 : Operation 36 [1/1] (1.45ns)   --->   "store i28 %C_1, i28* %C_3" [desDecrypt.c:203]   --->   Operation 36 'store' <Predicate = (!icmp_ln192 & !empty_854)> <Delay = 1.45>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load, i32 27)" [desDecrypt.c:197]   --->   Operation 37 'bitselect' 'tmp' <Predicate = (!icmp_ln192 & empty_854)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln197 = trunc i28 %C_3_load to i27" [desDecrypt.c:197]   --->   Operation 38 'trunc' 'trunc_ln197' <Predicate = (!icmp_ln192 & empty_854)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%C_2 = call i28 @_ssdm_op_BitConcatenate.i28.i27.i1(i27 %trunc_ln197, i1 %tmp)" [desDecrypt.c:197]   --->   Operation 39 'bitconcatenate' 'C_2' <Predicate = (!icmp_ln192 & empty_854)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_1 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load, i32 27)" [desDecrypt.c:198]   --->   Operation 40 'bitselect' 'tmp_1' <Predicate = (!icmp_ln192 & empty_854)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln198 = trunc i28 %D_load to i27" [desDecrypt.c:198]   --->   Operation 41 'trunc' 'trunc_ln198' <Predicate = (!icmp_ln192 & empty_854)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%D_2 = call i28 @_ssdm_op_BitConcatenate.i28.i27.i1(i27 %trunc_ln198, i1 %tmp_1)" [desDecrypt.c:198]   --->   Operation 42 'bitconcatenate' 'D_2' <Predicate = (!icmp_ln192 & empty_854)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (1.45ns)   --->   "store i28 %D_2, i28* %D" [desDecrypt.c:199]   --->   Operation 43 'store' <Predicate = (!icmp_ln192 & empty_854)> <Delay = 1.45>
+ST_2 : Operation 44 [1/1] (1.45ns)   --->   "store i28 %C_2, i28* %C_3" [desDecrypt.c:199]   --->   Operation 44 'store' <Predicate = (!icmp_ln192 & empty_854)> <Delay = 1.45>
+
+State 3 <SV = 2> <Delay = 1.75>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str3) nounwind" [desDecrypt.c:192]   --->   Operation 45 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_2_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str3) nounwind" [desDecrypt.c:192]   --->   Operation 46 'specregionbegin' 'tmp_2_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [desDecrypt.c:193]   --->   Operation 47 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "br label %loop3_end"   --->   Operation 48 'br' <Predicate = (!empty_854)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "br label %loop3_end" [desDecrypt.c:199]   --->   Operation 49 'br' <Predicate = (empty_854)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%C_3_load_1 = load i28* %C_3" [desDecrypt.c:218]   --->   Operation 50 'load' 'C_3_load_1' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%D_load_1 = load i28* %D" [desDecrypt.c:218]   --->   Operation 51 'load' 'D_load_1' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%trunc_ln212 = trunc i28 %D_load_1 to i1" [desDecrypt.c:212]   --->   Operation 52 'trunc' 'trunc_ln212' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln212_1 = trunc i28 %C_3_load_1 to i1" [desDecrypt.c:212]   --->   Operation 53 'trunc' 'trunc_ln212_1' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln214 = zext i5 %i_2_i to i64" [desDecrypt.c:214]   --->   Operation 54 'zext' 'zext_ln214' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%sub_key_addr = getelementptr [16 x i48]* %sub_key, i64 0, i64 %zext_ln214" [desDecrypt.c:214]   --->   Operation 55 'getelementptr' 'sub_key_addr' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_2 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 13)" [desDecrypt.c:218]   --->   Operation 56 'bitselect' 'tmp_2' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 11)" [desDecrypt.c:218]   --->   Operation 57 'bitselect' 'tmp_3' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 14)" [desDecrypt.c:218]   --->   Operation 58 'bitselect' 'tmp_6' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_7 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 17)" [desDecrypt.c:218]   --->   Operation 59 'bitselect' 'tmp_7' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 4)" [desDecrypt.c:218]   --->   Operation 60 'bitselect' 'tmp_8' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_9 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 27)" [desDecrypt.c:218]   --->   Operation 61 'bitselect' 'tmp_9' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_10 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 23)" [desDecrypt.c:218]   --->   Operation 62 'bitselect' 'tmp_10' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 25)" [desDecrypt.c:218]   --->   Operation 63 'bitselect' 'tmp_11' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 22)" [desDecrypt.c:218]   --->   Operation 64 'bitselect' 'tmp_12' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%tmp_13 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 7)" [desDecrypt.c:218]   --->   Operation 65 'bitselect' 'tmp_13' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 18)" [desDecrypt.c:218]   --->   Operation 66 'bitselect' 'tmp_14' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 5)" [desDecrypt.c:218]   --->   Operation 67 'bitselect' 'tmp_15' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_16 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 9)" [desDecrypt.c:218]   --->   Operation 68 'bitselect' 'tmp_16' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_17 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 16)" [desDecrypt.c:218]   --->   Operation 69 'bitselect' 'tmp_17' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 24)" [desDecrypt.c:218]   --->   Operation 70 'bitselect' 'tmp_18' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 2)" [desDecrypt.c:218]   --->   Operation 71 'bitselect' 'tmp_19' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 20)" [desDecrypt.c:218]   --->   Operation 72 'bitselect' 'tmp_20' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_21 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 12)" [desDecrypt.c:218]   --->   Operation 73 'bitselect' 'tmp_21' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 21)" [desDecrypt.c:218]   --->   Operation 74 'bitselect' 'tmp_22' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_23 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 1)" [desDecrypt.c:218]   --->   Operation 75 'bitselect' 'tmp_23' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_24 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 8)" [desDecrypt.c:218]   --->   Operation 76 'bitselect' 'tmp_24' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%tmp_25 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 15)" [desDecrypt.c:218]   --->   Operation 77 'bitselect' 'tmp_25' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_26 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %C_3_load_1, i32 26)" [desDecrypt.c:218]   --->   Operation 78 'bitselect' 'tmp_26' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_27 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 15)" [desDecrypt.c:218]   --->   Operation 79 'bitselect' 'tmp_27' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%tmp_28 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 4)" [desDecrypt.c:218]   --->   Operation 80 'bitselect' 'tmp_28' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%tmp_29 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 25)" [desDecrypt.c:218]   --->   Operation 81 'bitselect' 'tmp_29' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_30 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 19)" [desDecrypt.c:218]   --->   Operation 82 'bitselect' 'tmp_30' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%tmp_31 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 9)" [desDecrypt.c:218]   --->   Operation 83 'bitselect' 'tmp_31' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_32 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 1)" [desDecrypt.c:218]   --->   Operation 84 'bitselect' 'tmp_32' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_33 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 26)" [desDecrypt.c:218]   --->   Operation 85 'bitselect' 'tmp_33' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_34 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 16)" [desDecrypt.c:218]   --->   Operation 86 'bitselect' 'tmp_34' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_35 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 5)" [desDecrypt.c:218]   --->   Operation 87 'bitselect' 'tmp_35' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%tmp_36 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 11)" [desDecrypt.c:218]   --->   Operation 88 'bitselect' 'tmp_36' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_37 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 23)" [desDecrypt.c:218]   --->   Operation 89 'bitselect' 'tmp_37' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_38 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 8)" [desDecrypt.c:218]   --->   Operation 90 'bitselect' 'tmp_38' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_39 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 12)" [desDecrypt.c:218]   --->   Operation 91 'bitselect' 'tmp_39' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%tmp_40 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 7)" [desDecrypt.c:218]   --->   Operation 92 'bitselect' 'tmp_40' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%tmp_41 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 17)" [desDecrypt.c:218]   --->   Operation 93 'bitselect' 'tmp_41' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_42 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 22)" [desDecrypt.c:218]   --->   Operation 94 'bitselect' 'tmp_42' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_43 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 3)" [desDecrypt.c:218]   --->   Operation 95 'bitselect' 'tmp_43' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_44 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 10)" [desDecrypt.c:218]   --->   Operation 96 'bitselect' 'tmp_44' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_45 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 14)" [desDecrypt.c:218]   --->   Operation 97 'bitselect' 'tmp_45' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%tmp_46 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 6)" [desDecrypt.c:218]   --->   Operation 98 'bitselect' 'tmp_46' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%tmp_47 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 20)" [desDecrypt.c:218]   --->   Operation 99 'bitselect' 'tmp_47' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%tmp_48 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 27)" [desDecrypt.c:218]   --->   Operation 100 'bitselect' 'tmp_48' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_49 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %D_load_1, i32 24)" [desDecrypt.c:218]   --->   Operation 101 'bitselect' 'tmp_49' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%or_ln218_s = call i48 @_ssdm_op_BitConcatenate.i48.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1(i1 %tmp_6, i1 %tmp_3, i1 %tmp_7, i1 %tmp_8, i1 %tmp_9, i1 %tmp_10, i1 %tmp_11, i1 %trunc_ln212_1, i1 %tmp_2, i1 %tmp_12, i1 %tmp_13, i1 %tmp_14, i1 %tmp_15, i1 %tmp_16, i1 %tmp_17, i1 %tmp_18, i1 %tmp_19, i1 %tmp_20, i1 %tmp_21, i1 %tmp_22, i1 %tmp_23, i1 %tmp_24, i1 %tmp_25, i1 %tmp_26, i1 %tmp_27, i1 %tmp_28, i1 %tmp_29, i1 %tmp_30, i1 %tmp_31, i1 %tmp_32, i1 %tmp_33, i1 %tmp_34, i1 %tmp_35, i1 %tmp_36, i1 %tmp_37, i1 %tmp_38, i1 %tmp_39, i1 %tmp_40, i1 %tmp_41, i1 %trunc_ln212, i1 %tmp_42, i1 %tmp_43, i1 %tmp_44, i1 %tmp_45, i1 %tmp_46, i1 %tmp_47, i1 %tmp_48, i1 %tmp_49)" [desDecrypt.c:218]   --->   Operation 102 'bitconcatenate' 'or_ln218_s' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (1.75ns)   --->   "store i48 %or_ln218_s, i48* %sub_key_addr, align 8" [desDecrypt.c:218]   --->   Operation 103 'store' <Predicate = (!icmp_ln192)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 16> <RAM>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%empty_847 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str3, i32 %tmp_2_i) nounwind" [desDecrypt.c:221]   --->   Operation 104 'specregionend' 'empty_847' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "br label %0" [desDecrypt.c:192]   --->   Operation 105 'br' <Predicate = (!icmp_ln192)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.00>
+ST_4 : Operation 106 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 106 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.45ns
+The critical path consists of the following:
+	'alloca' operation ('C') [4]  (0 ns)
+	'store' operation ('store_ln192', desDecrypt.c:192) of variable 'C', desDecrypt.c:188 on local variable 'C' [11]  (1.45 ns)
+
+ <State 2>: 2.02ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', desDecrypt.c:192) [14]  (0 ns)
+	'icmp' operation ('empty_853', desDecrypt.c:192) [30]  (1.22 ns)
+	'or' operation ('empty_854', desDecrypt.c:192) [31]  (0.8 ns)
+
+ <State 3>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('C_3_load_1', desDecrypt.c:218) on local variable 'C' [54]  (0 ns)
+	'store' operation ('store_ln218', desDecrypt.c:218) of variable 'or_ln218_s', desDecrypt.c:218 on array 'sub_key' [107]  (1.75 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

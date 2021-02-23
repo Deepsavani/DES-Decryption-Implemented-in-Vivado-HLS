@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names." projectName="DES_DEC" solutionName="Without_pragmas" date="2020-12-24T13:12:58.866-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="Without_pragmas" date="2020-12-24T13:12:49.904-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="Without_pragmas" date="2020-12-24T13:12:49.890-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'." projectName="DES_DEC" solutionName="Without_pragmas" date="2020-12-24T13:12:49.653-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'." projectName="DES_DEC" solutionName="Without_pragmas" date="2020-12-24T13:12:48.857-0500" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names." projectName="DES_DEC" solutionName="C_8_Register" date="2020-12-24T03:30:23.066-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_8_Register" date="2020-12-24T03:30:13.658-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_8_Register" date="2020-12-24T03:30:13.651-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'." projectName="DES_DEC" solutionName="C_8_Register" date="2020-12-24T03:30:13.299-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'." projectName="DES_DEC" solutionName="C_8_Register" date="2020-12-24T03:30:12.294-0500" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names." projectName="DES_DEC" solutionName="C_8_BRAM" date="2020-12-24T03:18:47.462-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-152] Cannot apply array mapping directives with instance name 'array_BRAM' (desDecrypt.c:32): cannot find another array to be merged with." projectName="DES_DEC" solutionName="C_8_BRAM" date="2020-12-24T03:18:47.443-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_8_BRAM" date="2020-12-24T03:18:38.462-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_8_BRAM" date="2020-12-24T03:18:38.456-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'." projectName="DES_DEC" solutionName="C_8_BRAM" date="2020-12-24T03:18:38.127-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'." projectName="DES_DEC" solutionName="C_8_BRAM" date="2020-12-24T03:18:37.195-0500" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names." projectName="DES_DEC" solutionName="C_8" date="2020-12-24T02:58:54.910-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_8" date="2020-12-24T02:58:45.965-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_8" date="2020-12-24T02:58:45.958-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'." projectName="DES_DEC" solutionName="C_8" date="2020-12-24T02:58:45.627-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'." projectName="DES_DEC" solutionName="C_8" date="2020-12-24T02:58:44.727-0500" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names." projectName="DES_DEC" solutionName="C_6_Array_partition" date="2020-12-24T01:41:04.152-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_6_Array_partition" date="2020-12-24T01:40:54.926-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_6_Array_partition" date="2020-12-24T01:40:54.919-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'." projectName="DES_DEC" solutionName="C_6_Array_partition" date="2020-12-24T01:40:54.584-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'." projectName="DES_DEC" solutionName="C_6_Array_partition" date="2020-12-24T01:40:53.771-0500" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names." projectName="DES_DEC" solutionName="C_5_Unroll_fully" date="2020-12-24T01:39:26.466-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_5_Unroll_fully" date="2020-12-24T01:39:17.503-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_5_Unroll_fully" date="2020-12-24T01:39:17.497-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'." projectName="DES_DEC" solutionName="C_5_Unroll_fully" date="2020-12-24T01:39:17.162-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'." projectName="DES_DEC" solutionName="C_5_Unroll_fully" date="2020-12-24T01:39:16.223-0500" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names." projectName="DES_DEC" solutionName="C_5_unroll_50percent" date="2020-12-24T01:36:43.881-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_5_unroll_50percent" date="2020-12-24T01:36:34.862-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="DES_DEC" solutionName="C_5_unroll_50percent" date="2020-12-24T01:36:34.856-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'." projectName="DES_DEC" solutionName="C_5_unroll_50percent" date="2020-12-24T01:36:34.528-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'." projectName="DES_DEC" solutionName="C_5_unroll_50percent" date="2020-12-24T01:36:33.618-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

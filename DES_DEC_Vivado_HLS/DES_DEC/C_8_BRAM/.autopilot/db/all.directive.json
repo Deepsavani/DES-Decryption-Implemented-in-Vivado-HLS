@@ -1,0 +1,27 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "des_dec",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_MAP",
+            "option": [
+              {
+                "name": "variable",
+                "value": "sub_key",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "instance",
+                "value": "array_BRAM"
+              },
+              {
+                "name": "horizontal",
+                "value": "",
+                "positionalBoolean": "mode"
+              }
+            ]
+          }
+        }]
+    }]}

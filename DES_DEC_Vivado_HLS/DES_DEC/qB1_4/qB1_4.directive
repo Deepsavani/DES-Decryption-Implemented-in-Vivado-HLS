@@ -1,0 +1,17 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="des_dec" label="Pipeline_loop4" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="des_dec" label="loop4_1" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="des_dec" label="loop4_2" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="des_dec" label="loop4_3" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

@@ -1,0 +1,617 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tl-cpg236-2L'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'desEncrypt.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'desDecrypt.c' ... 
+WARNING: [HLS 214-111] Static variables and non-static stream cannot be used inside a dataflow region: desDecrypt.c:45:17
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file desDecrypt.c
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:35 . Memory (MB): peak = 163.906 ; gain = 72.551
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:35 . Memory (MB): peak = 163.906 ; gain = 72.551
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:36 . Memory (MB): peak = 163.906 ; gain = 72.551
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:36 . Memory (MB): peak = 163.906 ; gain = 72.551
+INFO: [XFORM 203-721] Changing loop 'Loop_unroll1_proc' (desDecrypt.c:171) to a process function for dataflow in function 'des_dec'.
+INFO: [XFORM 203-721] Changing loop 'Loop_unroll2_proc' (desDecrypt.c:182) to a process function for dataflow in function 'des_dec'.
+INFO: [XFORM 203-721] Changing loop 'Loop_3_proc' (desDecrypt.c:192) to a process function for dataflow in function 'des_dec'.
+INFO: [XFORM 203-721] Changing loop 'Loop_Pipeline_loop4_proc' (desDecrypt.c:223) to a process function for dataflow in function 'des_dec'.
+INFO: [XFORM 203-721] Changing loop 'Loop_5_proc' (desDecrypt.c:267) to a process function for dataflow in function 'des_dec'.
+WARNING: [XFORM 203-713] All the elements of global array 'sub_key' should be updated in process function 'Loop_3_proc', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'des_dec', detected/extracted 8 process function(s): 
+	 'des_dec.entry7'
+	 'Loop_unroll1_proc'
+	 'Block_des_dec_.exit2_proc'
+	 'Loop_unroll2_proc'
+	 'Loop_3_proc'
+	 'Loop_Pipeline_loop4_proc'
+	 'Loop_5_proc'
+	 '__desDecrypt.c_line274_proc'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:37 . Memory (MB): peak = 163.906 ; gain = 72.551
+WARNING: [XFORM 203-631] Renaming function '__desDecrypt.c_line274_proc' to '__desDecrypt.c_line2' (desDecrypt.c:274:24)
+WARNING: [XFORM 203-631] Renaming function 'Loop_Pipeline_loop4_proc' to 'Loop_Pipeline_loop4_' (desDecrypt.c:223:48)
+WARNING: [XFORM 203-631] Renaming function 'Block_des_dec_.exit2_proc' to 'Block_des_dec_.exit2' (desDecrypt.c:178:16)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:37 . Memory (MB): peak = 229.664 ; gain = 138.309
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'des_dec' ...
+WARNING: [SYN 201-103] Legalizing function name 'des_dec.entry7' to 'des_dec_entry7'.
+WARNING: [SYN 201-103] Legalizing function name 'Block_des_dec_.exit2' to 'Block_des_dec_exit2'.
+WARNING: [SYN 201-103] Legalizing function name 'Loop_Pipeline_loop4_' to 'Loop_Pipeline_loop4_s'.
+WARNING: [SYN 201-103] Legalizing function name '__desDecrypt.c_line2' to 'p_desDecrypt_c_line2'.
+WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'des_dec_entry7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 37.315 seconds; current allocated memory: 179.564 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.093 seconds; current allocated memory: 179.625 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_unroll1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.101 seconds; current allocated memory: 179.765 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.074 seconds; current allocated memory: 179.859 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_des_dec_exit2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.077 seconds; current allocated memory: 179.875 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.064 seconds; current allocated memory: 179.916 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_unroll2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.105 seconds; current allocated memory: 179.970 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.077 seconds; current allocated memory: 180.072 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_3_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.097 seconds; current allocated memory: 180.230 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.091 seconds; current allocated memory: 180.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_Pipeline_loop4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.144 seconds; current allocated memory: 180.742 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.118 seconds; current allocated memory: 181.088 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_5_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 181.204 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.071 seconds; current allocated memory: 181.293 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_desDecrypt_c_line2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.085 seconds; current allocated memory: 181.301 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.069 seconds; current allocated memory: 181.329 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'des_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.077 seconds; current allocated memory: 181.398 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 181.578 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'des_dec_entry7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'des_dec_entry7'.
+INFO: [HLS 200-111]  Elapsed time: 0.175 seconds; current allocated memory: 181.757 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_unroll1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Loop_unroll1_proc_IP' to 'Loop_unroll1_procbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_unroll1_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.178 seconds; current allocated memory: 182.020 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_des_dec_exit2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_des_dec_exit2'.
+INFO: [HLS 200-111]  Elapsed time: 0.172 seconds; current allocated memory: 182.165 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_unroll2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Loop_unroll2_proc_PC1' to 'Loop_unroll2_proccud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_unroll2_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 182.385 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_3_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_3_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.185 seconds; current allocated memory: 182.807 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_Pipeline_loop4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Loop_Pipeline_loop4_s_P' to 'Loop_Pipeline_loodEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Loop_Pipeline_loop4_s_E' to 'Loop_Pipeline_looeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Loop_Pipeline_loop4_s_S' to 'Loop_Pipeline_loofYi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_Pipeline_loop4_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.305 seconds; current allocated memory: 183.507 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_5_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_5_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.429 seconds; current allocated memory: 183.811 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_desDecrypt_c_line2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_desDecrypt_c_line2'.
+INFO: [HLS 200-111]  Elapsed time: 0.176 seconds; current allocated memory: 183.964 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'des_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'des_dec/input_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'des_dec/key' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'des_dec' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'start_for_Loop_unroll1_proc_U0' to 'start_for_Loop_ung8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Loop_unroll2_proc_U0' to 'start_for_Loop_unhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'des_dec'.
+INFO: [HLS 200-111]  Elapsed time: 0.183 seconds; current allocated memory: 184.672 MB.
+INFO: [RTMG 210-279] Implementing memory 'Loop_unroll1_procbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_unroll2_proccud_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_3_proc_PC2_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_Pipeline_loodEe_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_Pipeline_looeOg_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_Pipeline_loofYi_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_5_proc_PI_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'des_dec_sub_key_memcore_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'input_c_U(fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'key_c_U(fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'init_perm_res_0_loc_s_U(fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'L_loc_channel_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'R_loc_channel_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'permuted_choice_1_0_s_U(fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'permuted_choice_1_0_1_U(fifo_w60_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'temp_loc_channel_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'L_0_loc_channel_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'inv_init_perm_res_0_s_U(fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Loop_ung8j_U(start_for_Loop_ung8j)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Loop_unhbi_U(start_for_Loop_unhbi)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:44 . Memory (MB): peak = 249.750 ; gain = 158.395
+INFO: [VHDL 208-304] Generating VHDL RTL for des_dec.
+INFO: [VLOG 209-307] Generating Verilog RTL for des_dec.
+INFO: [HLS 200-112] Total elapsed time: 44.051 seconds; peak allocated memory: 184.672 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tl-cpg236-2L'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'desEncrypt.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'desDecrypt.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.086 ; gain = 92.715
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.086 ; gain = 92.715
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.086 ; gain = 92.715
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.086 ; gain = 92.715
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 184.086 ; gain = 92.715
+INFO: [XFORM 203-151] Mapping array 'sub_key' (desDecrypt.c:32) with offset 0, array 'IP' with offset 16, array 'PI' with offset 80, array 'E' with offset 144, array 'P' with offset 192, array 'PC1' with offset 224, array 'PC2' with offset 280 and array 'S' with offset 328 into array 'array3' horizontally.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 184.086 ; gain = 92.715
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'des_dec' ...
+WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'des_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.894 seconds; current allocated memory: 103.448 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 9 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.173 seconds; current allocated memory: 104.344 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'des_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'des_dec/input_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'des_dec/key' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'des_dec' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'des_dec'.
+INFO: [HLS 200-111]  Elapsed time: 0.247 seconds; current allocated memory: 105.629 MB.
+INFO: [RTMG 210-278] Implementing memory 'des_dec_array3_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 184.086 ; gain = 92.715
+INFO: [VHDL 208-304] Generating VHDL RTL for des_dec.
+INFO: [VLOG 209-307] Generating Verilog RTL for des_dec.
+INFO: [HLS 200-112] Total elapsed time: 12.886 seconds; peak allocated memory: 105.629 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tl-cpg236-2L'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'desEncrypt.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'desDecrypt.c' ... 
+WARNING: [HLS 214-114] Only function calls and local variable declarations are allowed in a dataflow region: desDecrypt.c:225:20
+WARNING: [HLS 214-107] Unsupported for-loop initialization statement for dataflow: desDecrypt.c:223:36
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file desDecrypt.c
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.473 ; gain = 93.086
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.473 ; gain = 93.086
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.473 ; gain = 93.086
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.473 ; gain = 93.086
+INFO: [XFORM 203-721] Changing loop 'Loop_0' (desDecrypt.c:227)  to a process function for dataflow in function 'des_dec'.
+INFO: [XFORM 203-721] Changing loop 'Loop_1' (desDecrypt.c:235)  to a process function for dataflow in function 'des_dec'.
+INFO: [XFORM 203-721] Changing loop 'Loop_2' (desDecrypt.c:252)  to a process function for dataflow in function 'des_dec'.
+ERROR: [XFORM 203-722] Cannot read value of  's_output.0'  from previous iterations in dataflow Pipeline_loop4  (desDecrypt.c:223)  of function 'des_dec'.
+ERROR: [XFORM 203-722] Cannot read value of  'temp'  from previous iterations in dataflow Pipeline_loop4  (desDecrypt.c:223)  of function 'des_dec'.
+ERROR: [XFORM 203-722] Cannot read value of  'L.0'  from previous iterations in dataflow Pipeline_loop4  (desDecrypt.c:223)  of function 'des_dec'.
+ERROR: [HLS 200-70] Pre-synthesis failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tl-cpg236-2L'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'desEncrypt.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'desDecrypt.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.426 ; gain = 93.078
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.426 ; gain = 93.078
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.426 ; gain = 93.078
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.426 ; gain = 93.078
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Pipeline_loop4' (desDecrypt.c:223) in function 'des_dec' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1' (desDecrypt.c:227) in function 'des_dec' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2' (desDecrypt.c:235) in function 'des_dec' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.3' (desDecrypt.c:252) in function 'des_dec' completely with a factor of 32.
+INFO: [XFORM 203-11] Balancing expressions in function 'des_dec' (desDecrypt.c:14)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 184.426 ; gain = 93.078
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'zext.ln178' (desDecrypt.c:178:16) (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 's_output' (desDecrypt.c:27) (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'temp' (desDecrypt.c:29) (distance = 1).
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 184.426 ; gain = 93.078
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'des_dec' ...
+WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'des_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Pipeline_loop4'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.298 seconds; current allocated memory: 105.614 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 106.786 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'des_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'des_dec/input_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'des_dec/key' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'des_dec' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'des_dec'.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 109.099 MB.
+INFO: [RTMG 210-279] Implementing memory 'des_dec_IP_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'des_dec_PC1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'des_dec_PC2_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'des_dec_S_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'des_dec_PI_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'des_dec_sub_key_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 184.426 ; gain = 93.078
+INFO: [VHDL 208-304] Generating VHDL RTL for des_dec.
+INFO: [VLOG 209-307] Generating Verilog RTL for des_dec.
+INFO: [HLS 200-112] Total elapsed time: 16.166 seconds; peak allocated memory: 109.099 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'E:/xilinx/Vivado/2019.1/common/technology/xilinx/artix7l/artix7l.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/artix7l/artix7l'.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tl-cpg236-2L'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'desEncrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'desDecrypt.H'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'desEncrypt.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'desDecrypt.c' ... 
+WARNING: [HLS 214-111] Static variables and non-static stream cannot be used inside a dataflow region: desDecrypt.c:45:17
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file desDecrypt.c
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.391 ; gain = 93.012
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.391 ; gain = 93.012
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.391 ; gain = 93.012
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.391 ; gain = 93.012
+INFO: [XFORM 203-721] Changing loop 'Loop_unroll1_proc' (desDecrypt.c:171) to a process function for dataflow in function 'des_dec'.
+INFO: [XFORM 203-721] Changing loop 'Loop_unroll2_proc' (desDecrypt.c:182) to a process function for dataflow in function 'des_dec'.
+INFO: [XFORM 203-721] Changing loop 'Loop_3_proc' (desDecrypt.c:192) to a process function for dataflow in function 'des_dec'.
+INFO: [XFORM 203-721] Changing loop 'Loop_Pipeline_loop4_proc' (desDecrypt.c:223) to a process function for dataflow in function 'des_dec'.
+INFO: [XFORM 203-721] Changing loop 'Loop_5_proc' (desDecrypt.c:267) to a process function for dataflow in function 'des_dec'.
+WARNING: [XFORM 203-713] All the elements of global array 'sub_key' should be updated in process function 'Loop_3_proc', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'des_dec', detected/extracted 8 process function(s): 
+	 'des_dec.entry7'
+	 'Loop_unroll1_proc'
+	 'Block_des_dec_.exit2_proc'
+	 'Loop_unroll2_proc'
+	 'Loop_3_proc'
+	 'Loop_Pipeline_loop4_proc'
+	 'Loop_5_proc'
+	 '__desDecrypt.c_line274_proc'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 184.391 ; gain = 93.012
+WARNING: [XFORM 203-631] Renaming function '__desDecrypt.c_line274_proc' to '__desDecrypt.c_line2' (desDecrypt.c:274:24)
+WARNING: [XFORM 203-631] Renaming function 'Loop_Pipeline_loop4_proc' to 'Loop_Pipeline_loop4_' (desDecrypt.c:223:56)
+WARNING: [XFORM 203-631] Renaming function 'Block_des_dec_.exit2_proc' to 'Block_des_dec_.exit2' (desDecrypt.c:178:16)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 229.488 ; gain = 138.109
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'des_dec' ...
+WARNING: [SYN 201-103] Legalizing function name 'des_dec.entry7' to 'des_dec_entry7'.
+WARNING: [SYN 201-103] Legalizing function name 'Block_des_dec_.exit2' to 'Block_des_dec_exit2'.
+WARNING: [SYN 201-103] Legalizing function name 'Loop_Pipeline_loop4_' to 'Loop_Pipeline_loop4_s'.
+WARNING: [SYN 201-103] Legalizing function name '__desDecrypt.c_line2' to 'p_desDecrypt_c_line2'.
+WARNING: [SYN 201-107] Renaming port name 'des_dec/input' to 'des_dec/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'des_dec_entry7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.278 seconds; current allocated memory: 179.565 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 179.627 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_unroll1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.092 seconds; current allocated memory: 179.767 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.071 seconds; current allocated memory: 179.861 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_des_dec_exit2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.087 seconds; current allocated memory: 179.893 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.062 seconds; current allocated memory: 179.933 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_unroll2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.099 seconds; current allocated memory: 179.987 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.074 seconds; current allocated memory: 180.089 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_3_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 180.232 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 180.443 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_Pipeline_loop4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.144 seconds; current allocated memory: 180.746 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 181.096 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_5_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.151 seconds; current allocated memory: 181.212 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.076 seconds; current allocated memory: 181.301 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_desDecrypt_c_line2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.083 seconds; current allocated memory: 181.309 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.064 seconds; current allocated memory: 181.337 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'des_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 181.407 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.171 seconds; current allocated memory: 181.586 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'des_dec_entry7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'des_dec_entry7'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 181.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_unroll1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Loop_unroll1_proc_IP' to 'Loop_unroll1_procbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_unroll1_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.121 seconds; current allocated memory: 182.028 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_des_dec_exit2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_des_dec_exit2'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 182.174 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_unroll2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Loop_unroll2_proc_PC1' to 'Loop_unroll2_proccud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_unroll2_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.124 seconds; current allocated memory: 182.393 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_3_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_3_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.173 seconds; current allocated memory: 182.830 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_Pipeline_loop4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Loop_Pipeline_loop4_s_P' to 'Loop_Pipeline_loodEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Loop_Pipeline_loop4_s_E' to 'Loop_Pipeline_looeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Loop_Pipeline_loop4_s_S' to 'Loop_Pipeline_loofYi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_Pipeline_loop4_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.322 seconds; current allocated memory: 183.515 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_5_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_5_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.419 seconds; current allocated memory: 183.819 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_desDecrypt_c_line2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_desDecrypt_c_line2'.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 183.973 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'des_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'des_dec/input_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'des_dec/key' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'des_dec' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'start_for_Loop_unroll1_proc_U0' to 'start_for_Loop_ung8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Loop_unroll2_proc_U0' to 'start_for_Loop_unhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'des_dec'.
+INFO: [HLS 200-111]  Elapsed time: 0.174 seconds; current allocated memory: 184.665 MB.
+INFO: [RTMG 210-279] Implementing memory 'Loop_unroll1_procbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_unroll2_proccud_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_3_proc_PC2_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_Pipeline_loodEe_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_Pipeline_looeOg_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_Pipeline_loofYi_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Loop_5_proc_PI_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'des_dec_sub_key_memcore_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'input_c_U(fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'key_c_U(fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'init_perm_res_0_loc_s_U(fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'L_loc_channel_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'R_loc_channel_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'permuted_choice_1_0_s_U(fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'permuted_choice_1_0_1_U(fifo_w60_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'temp_loc_channel_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'L_0_loc_channel_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'inv_init_perm_res_0_s_U(fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Loop_ung8j_U(start_for_Loop_ung8j)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Loop_unhbi_U(start_for_Loop_unhbi)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 249.961 ; gain = 158.582
+INFO: [VHDL 208-304] Generating VHDL RTL for des_dec.
+INFO: [VLOG 209-307] Generating Verilog RTL for des_dec.
+INFO: [HLS 200-112] Total elapsed time: 17.599 seconds; peak allocated memory: 184.665 MB.

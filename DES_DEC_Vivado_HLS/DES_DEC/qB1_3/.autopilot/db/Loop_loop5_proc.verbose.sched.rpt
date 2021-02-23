@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_loop5_proc'
+================================================================
+* Date:           Wed Dec 23 13:51:47 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        DES_DEC
+* Solution:       q21_3
+* Product family: artix7
+* Target device:  xc7a35tl-cpg236-2L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.909|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  129|  129|  129|  129|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- loop5   |  128|  128|         2|          -|          -|    64|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read1)" [desDecrypt.c:264]   --->   Operation 4 'read' 'p_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read)" [desDecrypt.c:264]   --->   Operation 5 'read' 'p_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%pre_output = call i64 @_ssdm_op_BitConcatenate.i64.i32.i32(i32 %p_read_3, i32 %p_read_2)" [desDecrypt.c:264]   --->   Operation 6 'bitconcatenate' 'pre_output' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.35ns)   --->   "br label %0"   --->   Operation 7 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 2.77>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%i_4_i = phi i7 [ 0, %entry ], [ %i, %1 ]"   --->   Operation 8 'phi' 'i_4_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%inv_init_perm_res_0_s = phi i64 [ 0, %entry ], [ %inv_init_perm_res, %1 ]"   --->   Operation 9 'phi' 'inv_init_perm_res_0_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (1.23ns)   --->   "%icmp_ln267 = icmp eq i7 %i_4_i, -64" [desDecrypt.c:267]   --->   Operation 10 'icmp' 'icmp_ln267' <Predicate = true> <Delay = 1.23> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64) nounwind"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.66ns)   --->   "%i = add i7 %i_4_i, 1" [desDecrypt.c:267]   --->   Operation 12 'add' 'i' <Predicate = true> <Delay = 1.66> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %icmp_ln267, label %Loop_loop5_proc.exit, label %1" [desDecrypt.c:267]   --->   Operation 13 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln270 = zext i7 %i_4_i to i64" [desDecrypt.c:270]   --->   Operation 14 'zext' 'zext_ln270' <Predicate = (!icmp_ln267)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%PI_addr = getelementptr [64 x i7]* @PI, i64 0, i64 %zext_ln270" [desDecrypt.c:270]   --->   Operation 15 'getelementptr' 'PI_addr' <Predicate = (!icmp_ln267)> <Delay = 0.00>
+ST_2 : Operation 16 [2/2] (2.77ns)   --->   "%PI_load = load i7* %PI_addr, align 1" [desDecrypt.c:270]   --->   Operation 16 'load' 'PI_load' <Predicate = (!icmp_ln267)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 7> <Depth = 64> <ROM>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln270_1 = trunc i64 %inv_init_perm_res_0_s to i63" [desDecrypt.c:270]   --->   Operation 17 'trunc' 'trunc_ln270_1' <Predicate = (!icmp_ln267)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "ret i64 %inv_init_perm_res_0_s" [desDecrypt.c:270]   --->   Operation 18 'ret' <Predicate = (icmp_ln267)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.90>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str9) nounwind" [desDecrypt.c:267]   --->   Operation 19 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/2] (2.77ns)   --->   "%PI_load = load i7* %PI_addr, align 1" [desDecrypt.c:270]   --->   Operation 20 'load' 'PI_load' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 7> <Depth = 64> <ROM>
+ST_3 : Operation 21 [1/1] (1.66ns)   --->   "%sub_ln270 = sub i7 -64, %PI_load" [desDecrypt.c:270]   --->   Operation 21 'sub' 'sub_ln270' <Predicate = true> <Delay = 1.66> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln270_1 = zext i7 %sub_ln270 to i64" [desDecrypt.c:270]   --->   Operation 22 'zext' 'zext_ln270_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (3.47ns)   --->   "%lshr_ln270 = lshr i64 %pre_output, %zext_ln270_1" [desDecrypt.c:270]   --->   Operation 23 'lshr' 'lshr_ln270' <Predicate = true> <Delay = 3.47> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.47> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln270 = trunc i64 %lshr_ln270 to i1" [desDecrypt.c:270]   --->   Operation 24 'trunc' 'trunc_ln270' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%inv_init_perm_res = call i64 @_ssdm_op_BitConcatenate.i64.i63.i1(i63 %trunc_ln270_1, i1 %trunc_ln270)" [desDecrypt.c:270]   --->   Operation 25 'bitconcatenate' 'inv_init_perm_res' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "br label %0" [desDecrypt.c:267]   --->   Operation 26 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', desDecrypt.c:267) [9]  (1.35 ns)
+
+ <State 2>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', desDecrypt.c:267) [9]  (0 ns)
+	'getelementptr' operation ('PI_addr', desDecrypt.c:270) [18]  (0 ns)
+	'load' operation ('PI_load', desDecrypt.c:270) on array 'PI' [19]  (2.77 ns)
+
+ <State 3>: 7.91ns
+The critical path consists of the following:
+	'load' operation ('PI_load', desDecrypt.c:270) on array 'PI' [19]  (2.77 ns)
+	'sub' operation ('sub_ln270', desDecrypt.c:270) [20]  (1.66 ns)
+	'lshr' operation ('lshr_ln270', desDecrypt.c:270) [22]  (3.48 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

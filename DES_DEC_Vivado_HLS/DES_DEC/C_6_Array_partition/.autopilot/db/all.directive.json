@@ -1,0 +1,27 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "des_dec",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "sub_key",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "complete",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        }]
+    }]}

@@ -1,0 +1,50 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="des_dec" label="" functionLabel="">
+            <pragma name="ALLOCATION">
+                <option name="instances" value="add" positionalBoolean="4"/>
+                <option name="limit" value="1"/>
+                <option name="operation" value="" positionalBoolean="type"/>
+            </pragma>
+        </directive>
+        <directive functionName="des_dec" label="" functionLabel="">
+            <pragma name="ALLOCATION">
+                <option name="instances" value="sub" positionalBoolean="4"/>
+                <option name="limit" value="1"/>
+                <option name="operation" value="" positionalBoolean="type"/>
+            </pragma>
+        </directive>
+        <directive functionName="des_dec" label="" functionLabel="">
+            <pragma name="ALLOCATION">
+                <option name="instances" value="icmp" positionalBoolean="4"/>
+                <option name="limit" value="1"/>
+                <option name="operation" value="" positionalBoolean="type"/>
+            </pragma>
+        </directive>
+        <directive functionName="des_dec" label="" functionLabel="">
+            <pragma name="ALLOCATION">
+                <option name="instances" value="lshr" positionalBoolean="4"/>
+                <option name="limit" value="1"/>
+                <option name="operation" value="" positionalBoolean="type"/>
+            </pragma>
+        </directive>
+        <directive functionName="des_dec" label="" functionLabel="">
+            <pragma name="ALLOCATION">
+                <option name="instances" value="dadd" positionalBoolean="4"/>
+                <option name="limit" value="1"/>
+                <option name="operation" value="" positionalBoolean="type"/>
+            </pragma>
+        </directive>
+        <directive functionName="des_dec" label="" functionLabel="">
+            <pragma name="ALLOCATION">
+                <option name="instances" value="dsub" positionalBoolean="4"/>
+                <option name="limit" value="1"/>
+                <option name="operation" value="" positionalBoolean="type"/>
+            </pragma>
+        </directive>
+        <directive functionName="des_dec" label="" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

@@ -1,0 +1,31 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "des_dec",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ALLOCATION",
+            "option": [
+              {
+                "name": "instances",
+                "value": "lshr",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "operation",
+                "value": "",
+                "positionalBoolean": "type"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "des_dec",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {"name": "DATAFLOW"}
+        }
+      ]
+    }]}

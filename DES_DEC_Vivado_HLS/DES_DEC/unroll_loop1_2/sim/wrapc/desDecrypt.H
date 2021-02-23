@@ -1,0 +1,1 @@
+uint64_t des_dec(uint64_t input, uint64_t key);

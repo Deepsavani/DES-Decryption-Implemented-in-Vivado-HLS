@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="des_dec.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_des_dec_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_des_dec_top/AESL_inst_des_dec//AESL_inst_des_dec_activity">
+         <obj_property name="label">AESL_inst_des_dec_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_des_dec_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_des_dec_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_des_dec_top/AESL_inst_des_dec//AESL_inst_des_dec_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_des_dec_top/AESL_inst_des_dec//AESL_inst_des_dec_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_des_dec_top/AESL_inst_des_dec//AESL_inst_des_dec_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/des_dec_entry7_U0_activity">
+            <obj_property name="label">des_dec_entry7_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">des_dec_entry7_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">des_dec_entry7_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/des_dec_entry7_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/des_dec_entry7_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/des_dec_entry7_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/Loop_unroll1_proc_U0_activity">
+            <obj_property name="label">Loop_unroll1_proc_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">Loop_unroll1_proc_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Loop_unroll1_proc_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/Loop_unroll1_proc_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/Loop_unroll1_proc_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/Loop_unroll1_proc_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Block_des_dec_exit2_U0/Block_des_dec_exit2_U0_activity">
+            <obj_property name="label">Block_des_dec_exit2_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">Block_des_dec_exit2_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Block_des_dec_exit2_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_des_dec_top/AESL_inst_des_dec/Block_des_dec_exit2_U0/Block_des_dec_exit2_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_des_dec_top/AESL_inst_des_dec/Block_des_dec_exit2_U0/Block_des_dec_exit2_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_des_dec_top/AESL_inst_des_dec/Block_des_dec_exit2_U0/Block_des_dec_exit2_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/Loop_unroll2_proc_U0_activity">
+            <obj_property name="label">Loop_unroll2_proc_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">Loop_unroll2_proc_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Loop_unroll2_proc_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/Loop_unroll2_proc_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/Loop_unroll2_proc_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/Loop_unroll2_proc_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/Loop_loop3_proc_U0_activity">
+            <obj_property name="label">Loop_loop3_proc_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">Loop_loop3_proc_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Loop_loop3_proc_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/Loop_loop3_proc_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/Loop_loop3_proc_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/Loop_loop3_proc_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/Loop_Pipeline_loop4_U0_activity">
+            <obj_property name="label">Loop_Pipeline_loop4_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">Loop_Pipeline_loop4_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Loop_Pipeline_loop4_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/Loop_Pipeline_loop4_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/Loop_Pipeline_loop4_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/Loop_Pipeline_loop4_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/Loop_loop5_proc_U0_activity">
+            <obj_property name="label">Loop_loop5_proc_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">Loop_loop5_proc_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Loop_loop5_proc_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/Loop_loop5_proc_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/Loop_loop5_proc_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/Loop_loop5_proc_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/p_desDecrypt_c_line2_U0/p_desDecrypt_c_line2_U0_activity">
+            <obj_property name="label">p_desDecrypt_c_line2_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">p_desDecrypt_c_line2_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">p_desDecrypt_c_line2_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_des_dec_top/AESL_inst_des_dec/p_desDecrypt_c_line2_U0/p_desDecrypt_c_line2_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_des_dec_top/AESL_inst_des_dec/p_desDecrypt_c_line2_U0/p_desDecrypt_c_line2_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_des_dec_top/AESL_inst_des_dec/p_desDecrypt_c_line2_U0/p_desDecrypt_c_line2_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_des_dec_top/AESL_inst_des_dec//AESL_inst_des_dec_activity">
+      <obj_property name="ElementShortName">AESL_inst_des_dec_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_des_dec_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_des_dec_group">
+      <obj_property name="label">AESL_inst_des_dec</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/des_dec_entry7_U0_activity">
+         <obj_property name="ElementShortName">des_dec_entry7_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">des_dec_entry7_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/Loop_unroll1_proc_U0_activity">
+         <obj_property name="ElementShortName">Loop_unroll1_proc_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Loop_unroll1_proc_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Block_des_dec_exit2_U0/Block_des_dec_exit2_U0_activity">
+         <obj_property name="ElementShortName">Block_des_dec_exit2_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Block_des_dec_exit2_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/Loop_unroll2_proc_U0_activity">
+         <obj_property name="ElementShortName">Loop_unroll2_proc_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Loop_unroll2_proc_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/Loop_loop3_proc_U0_activity">
+         <obj_property name="ElementShortName">Loop_loop3_proc_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Loop_loop3_proc_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/Loop_Pipeline_loop4_U0_activity">
+         <obj_property name="ElementShortName">Loop_Pipeline_loop4_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Loop_Pipeline_loop4_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/Loop_loop5_proc_U0_activity">
+         <obj_property name="ElementShortName">Loop_loop5_proc_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Loop_loop5_proc_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/p_desDecrypt_c_line2_U0/p_desDecrypt_c_line2_U0_activity">
+         <obj_property name="ElementShortName">p_desDecrypt_c_line2_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">p_desDecrypt_c_line2_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_des_dec_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="des_dec_entry7_U0_group">
+         <obj_property name="label">des_dec_entry7_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="des_dec_entry7_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="des_dec_entry7_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/real_start">
+               <obj_property name="ElementShortName">real_start</obj_property>
+               <obj_property name="ObjectShortName">real_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="des_dec_entry7_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="input_out_group">
+               <obj_property name="label">input_out(input_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/input_out_blk_n">
+                  <obj_property name="ElementShortName">input_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">input_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/input_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/input_out_full_n">
+                  <obj_property name="ElementShortName">input_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">input_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/input_out_write">
+                  <obj_property name="ElementShortName">input_out_write</obj_property>
+                  <obj_property name="ObjectShortName">input_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="key_out_group">
+               <obj_property name="label">key_out(key_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/key_out_blk_n">
+                  <obj_property name="ElementShortName">key_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">key_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/key_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/key_out_full_n">
+                  <obj_property name="ElementShortName">key_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">key_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/des_dec_entry7_U0/key_out_write">
+                  <obj_property name="ElementShortName">key_out_write</obj_property>
+                  <obj_property name="ObjectShortName">key_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="Loop_unroll1_proc_U0_group">
+         <obj_property name="label">Loop_unroll1_proc_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="Loop_unroll1_proc_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="input_r_group">
+               <obj_property name="label">input_r(input_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/input_r_blk_n">
+                  <obj_property name="ElementShortName">input_r_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">input_r_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/input_r_dout">
+                  <obj_property name="ElementShortName">input_r_dout[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">input_r_dout[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/input_r_empty_n">
+                  <obj_property name="ElementShortName">input_r_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">input_r_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/input_r_read">
+                  <obj_property name="ElementShortName">input_r_read</obj_property>
+                  <obj_property name="ObjectShortName">input_r_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="IP_group">
+               <obj_property name="label">IP(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/IP_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/IP_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/IP_ce0">
+                  <obj_property name="ElementShortName">IP_ce0</obj_property>
+                  <obj_property name="ObjectShortName">IP_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_unroll1_proc_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll1_proc_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_unroll1_proc_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="Block_des_dec_exit2_U0_group">
+         <obj_property name="label">Block_des_dec_exit2_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="Block_des_dec_exit2_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="Block_des_dec_exit2_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Block_des_dec_exit2_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Block_des_dec_exit2_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Block_des_dec_exit2_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Block_des_dec_exit2_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Block_des_dec_exit2_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="Loop_unroll2_proc_U0_group">
+         <obj_property name="label">Loop_unroll2_proc_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="Loop_unroll2_proc_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="key_group">
+               <obj_property name="label">key(key_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/key_blk_n">
+                  <obj_property name="ElementShortName">key_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">key_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/key_dout">
+                  <obj_property name="ElementShortName">key_dout[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">key_dout[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/key_empty_n">
+                  <obj_property name="ElementShortName">key_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">key_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/key_read">
+                  <obj_property name="ElementShortName">key_read</obj_property>
+                  <obj_property name="ObjectShortName">key_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="PC1_group">
+               <obj_property name="label">PC1(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/PC1_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/PC1_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/PC1_ce0">
+                  <obj_property name="ElementShortName">PC1_ce0</obj_property>
+                  <obj_property name="ObjectShortName">PC1_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_unroll2_proc_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_unroll2_proc_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_unroll2_proc_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="Loop_loop3_proc_U0_group">
+         <obj_property name="label">Loop_loop3_proc_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="Loop_loop3_proc_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_loop3_proc_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_loop3_proc_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="sub_key_group">
+               <obj_property name="label">sub_key(sub_key_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/sub_key_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/sub_key_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/sub_key_ce0">
+                  <obj_property name="ElementShortName">sub_key_ce0</obj_property>
+                  <obj_property name="ObjectShortName">sub_key_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/sub_key_we0">
+                  <obj_property name="ElementShortName">sub_key_we0</obj_property>
+                  <obj_property name="ObjectShortName">sub_key_we0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+                  <obj_property name="label">ap_done(i_write)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop3_proc_U0/ap_continue">
+                  <obj_property name="ElementShortName">ap_continue</obj_property>
+                  <obj_property name="ObjectShortName">ap_continue</obj_property>
+                  <obj_property name="label">ap_continue(i_full_n)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="Loop_Pipeline_loop4_U0_group">
+         <obj_property name="label">Loop_Pipeline_loop4_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="Loop_Pipeline_loop4_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="sub_key_group">
+               <obj_property name="label">sub_key(sub_key_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/sub_key_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/sub_key_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/sub_key_ce0">
+                  <obj_property name="ElementShortName">sub_key_ce0</obj_property>
+                  <obj_property name="ObjectShortName">sub_key_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="S_group">
+               <obj_property name="label">S(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/S_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/S_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/S_ce0">
+                  <obj_property name="ElementShortName">S_ce0</obj_property>
+                  <obj_property name="ObjectShortName">S_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_Pipeline_loop4_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_Pipeline_loop4_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_Pipeline_loop4_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="Loop_loop5_proc_U0_group">
+         <obj_property name="label">Loop_loop5_proc_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="Loop_loop5_proc_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="PI_group">
+               <obj_property name="label">PI(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/PI_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/PI_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/PI_ce0">
+                  <obj_property name="ElementShortName">PI_ce0</obj_property>
+                  <obj_property name="ObjectShortName">PI_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_loop5_proc_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/Loop_loop5_proc_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Loop_loop5_proc_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="p_desDecrypt_c_line2_U0_group">
+         <obj_property name="label">p_desDecrypt_c_line2_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="p_desDecrypt_c_line2_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="p_desDecrypt_c_line2_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/p_desDecrypt_c_line2_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/p_desDecrypt_c_line2_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/p_desDecrypt_c_line2_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_des_dec_top/AESL_inst_des_dec/p_desDecrypt_c_line2_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="p_desDecrypt_c_line2_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

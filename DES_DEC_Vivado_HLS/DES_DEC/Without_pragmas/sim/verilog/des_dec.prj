@@ -1,0 +1,12 @@
+sv work "glbl.v"
+sv xil_defaultlib "des_dec.autotb.v"
+sv xil_defaultlib "des_dec.v"
+sv xil_defaultlib "des_dec_E.v"
+sv xil_defaultlib "des_dec_IP.v"
+sv xil_defaultlib "des_dec_P.v"
+sv xil_defaultlib "des_dec_PC1.v"
+sv xil_defaultlib "des_dec_PC2.v"
+sv xil_defaultlib "des_dec_PI.v"
+sv xil_defaultlib "des_dec_S.v"
+sv xil_defaultlib "des_dec_sub_key.v"
+

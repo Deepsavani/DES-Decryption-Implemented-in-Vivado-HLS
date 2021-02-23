@@ -1,0 +1,162 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "E:/xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_des_dec.cpp
+   Compiling (apcc) desDEC_tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'E:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Wed Dec 23 20:38:10 -0500 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/desDEC_tb.c:1:
+C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/desDEC_tb.c:17:21: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+ printf("Key = 0x%""I64x""\n", key);
+                 ~~~^
+C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/desDEC_tb.c:18:34: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+ printf("Plain text input = 0x%""I64x""\n", plain_text);
+                              ~~~^
+C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/desDEC_tb.c:24:49: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+ printf("Cipher text output from DES_enc = 0x%""I64x""\n", enc_out);
+                                             ~~~^
+C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/desDEC_tb.c:36:35: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+ printf("Plain Text output = 0x%""I64x""\n",dec_out);
+                               ~~~^
+4 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) desEncrypt.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'E:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Wed Dec 23 20:38:14 -0500 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) desDecrypt.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'E:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Wed Dec 23 20:38:17 -0500 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Key = 0x147080221470802
+Plain text input = 0x123456789abcdef
+Cipher text output from DES_enc = 0x53ce3bdf95f95c5a
+comp = 1	(Decrypt successful)
+Plain Text output = 0x123456789abcdef
+
+C:\Users\deeps\OneDrive\Desktop\AHD_FINALS\DES_DEC\q2_4_pipelineDES\sim\verilog>set PATH= 
+
+C:\Users\deeps\OneDrive\Desktop\AHD_FINALS\DES_DEC\q2_4_pipelineDES\sim\verilog>call E:/xilinx/Vivado/2019.1/bin/xelab xil_defaultlib.apatb_des_dec_top glbl -prj des_dec.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "E:/xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s des_dec -debug wave 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "E:/xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_des_dec_top glbl -prj des_dec.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile E:/xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s des_dec -debug wave 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog/des_dec.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_des_dec_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog/des_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module des_dec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog/des_dec_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module des_dec_S_rom
+INFO: [VRFC 10-311] analyzing module des_dec_S
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.des_dec_S_rom
+Compiling module xil_defaultlib.des_dec_S(DataWidth=4,AddressRan...
+Compiling module xil_defaultlib.des_dec
+Compiling module xil_defaultlib.apatb_des_dec_top
+Compiling module work.glbl
+Built simulation snapshot des_dec
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog/xsim.dir/des_dec/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Dec 23 20:38:30 2020...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/des_dec/xsim_script.tcl
+# xsim {des_dec} -autoloadwcfg -tclbatch {des_dec.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source des_dec.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(wire) -into $coutputgroup]
+## add_wave /apatb_des_dec_top/AESL_inst_des_dec/ap_return -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set key_group [add_wave_group key(wire) -into $cinputgroup]
+## add_wave /apatb_des_dec_top/AESL_inst_des_dec/key -into $key_group -radix hex
+## set input_group [add_wave_group input(wire) -into $cinputgroup]
+## add_wave /apatb_des_dec_top/AESL_inst_des_dec/input_r -into $input_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_des_dec_top/AESL_inst_des_dec/ap_start -into $blocksiggroup
+## add_wave /apatb_des_dec_top/AESL_inst_des_dec/ap_done -into $blocksiggroup
+## add_wave /apatb_des_dec_top/AESL_inst_des_dec/ap_idle -into $blocksiggroup
+## add_wave /apatb_des_dec_top/AESL_inst_des_dec/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_des_dec_top/AESL_inst_des_dec/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_des_dec_top/AESL_inst_des_dec/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_des_dec_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_des_dec_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_des_dec_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_des_dec_top/LENGTH_input_r -into $tb_portdepth_group -radix hex
+## add_wave /apatb_des_dec_top/LENGTH_key -into $tb_portdepth_group -radix hex
+## add_wave /apatb_des_dec_top/LENGTH_ap_return -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(wire) -into $tbcoutputgroup]
+## add_wave /apatb_des_dec_top/ap_return -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_key_group [add_wave_group key(wire) -into $tbcinputgroup]
+## add_wave /apatb_des_dec_top/key -into $tb_key_group -radix hex
+## set tb_input_group [add_wave_group input(wire) -into $tbcinputgroup]
+## add_wave /apatb_des_dec_top/input_r -into $tb_input_group -radix hex
+## save_wave_config des_dec.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "305000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 345 ns : File "C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog/des_dec.autotb.v" Line 320
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Dec 23 20:38:36 2020...
+Key = 0x147080221470802
+Plain text input = 0x123456789abcdef
+Cipher text output from DES_enc = 0x53ce3bdf95f95c5a
+comp = 1	(Decrypt successful)
+Plain Text output = 0x123456789abcdef
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

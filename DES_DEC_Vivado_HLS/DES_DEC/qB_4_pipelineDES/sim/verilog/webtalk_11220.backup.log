@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Dec 23 20:38:29 2020
+# Process ID: 11220
+# Current directory: C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog
+# Command line: wbtcv.exe -mode batch -source C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog/xsim.dir/des_dec/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog/webtalk.log
+# Journal file: C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/q2_4_pipelineDES/sim/verilog/xsim.dir/des_dec/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Dec 23 20:38:30 2020...

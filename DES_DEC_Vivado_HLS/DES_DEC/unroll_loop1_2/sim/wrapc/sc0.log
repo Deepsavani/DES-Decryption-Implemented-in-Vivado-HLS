@@ -1,0 +1,41 @@
+   Build using "E:/xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_des_dec.cpp
+   Compiling (apcc) desDEC_tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'E:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Sun Dec 20 11:31:02 -0500 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/unroll_loop1_2/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/desDEC_tb.c:1:
+C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/desDEC_tb.c:17:21: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+ printf("Key = 0x%""I64x""\n", key);
+                 ~~~^
+C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/desDEC_tb.c:18:34: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+ printf("Plain text input = 0x%""I64x""\n", plain_text);
+                              ~~~^
+C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/desDEC_tb.c:24:49: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+ printf("Cipher text output from DES_enc = 0x%""I64x""\n", enc_out);
+                                             ~~~^
+C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/desDEC_tb.c:36:35: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+ printf("Plain Text output = 0x%""I64x""\n",dec_out);
+                               ~~~^
+4 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) desEncrypt.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'E:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Sun Dec 20 11:31:07 -0500 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/unroll_loop1_2/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) desDecrypt.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'E:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Sun Dec 20 11:31:11 -0500 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/AHD_FINALS/DES_DEC/unroll_loop1_2/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

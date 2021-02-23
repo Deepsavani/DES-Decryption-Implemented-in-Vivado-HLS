@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="desDecrypt.H" path="C:\Users\deeps\OneDrive\Desktop\AHD_FINAL_DSS569\AHD_FINALS\desDecrypt.H"/>
+    <originFiles name="desDecrypt.c" path="C:\Users\deeps\OneDrive\Desktop\AHD_FINAL_DSS569\AHD_FINALS\desDecrypt.c"/>
+    <originFiles name="desEncrypt.H" path="C:\Users\deeps\OneDrive\Desktop\AHD_FINAL_DSS569\AHD_FINALS\desEncrypt.H"/>
+    <originFiles name="desEncrypt.c" path="C:\Users\deeps\OneDrive\Desktop\AHD_FINAL_DSS569\AHD_FINALS\desEncrypt.c"/>
+  </source>
+  <testbench>
+    <originFiles name="desDEC_tb.c" path="C:\Users\deeps\OneDrive\Desktop\AHD_FINAL_DSS569\AHD_FINALS\desDEC_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

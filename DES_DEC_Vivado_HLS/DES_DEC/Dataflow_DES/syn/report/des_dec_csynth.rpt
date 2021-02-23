@@ -1,0 +1,200 @@
+
+
+================================================================
+== Vivado HLS Report for 'des_dec'
+================================================================
+* Date:           Tue Dec 22 19:03:31 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        DES_DEC
+* Solution:       Dataflow_DES
+* Product family: artix7
+* Target device:  xc7a35tl-cpg236-2L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.690|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+----------+
+    |   Latency   |   Interval  | Pipeline |
+    |  min |  max |  min |  max |   Type   |
+    +------+------+------+------+----------+
+    |  4984|  4984|  3154|  3154| dataflow |
+    +------+------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+-----------------------+------+------+------+------+---------+
+        |                         |                       |   Latency   |   Interval  | Pipeline|
+        |         Instance        |         Module        |  min |  max |  min |  max |   Type  |
+        +-------------------------+-----------------------+------+------+------+------+---------+
+        |Loop_Pipeline_loop4_U0   |Loop_Pipeline_loop4_s  |  3153|  3153|  3153|  3153|   none  |
+        |Loop_3_proc_U0           |Loop_3_proc            |  1585|  1585|  1585|  1585|   none  |
+        |Loop_5_proc_U0           |Loop_5_proc            |   129|   129|   129|   129|   none  |
+        |Loop_unroll1_proc_U0     |Loop_unroll1_proc      |   129|   129|   129|   129|   none  |
+        |Loop_unroll2_proc_U0     |Loop_unroll2_proc      |   113|   113|   113|   113|   none  |
+        |Block_des_dec_exit2_U0   |Block_des_dec_exit2    |     0|     0|     0|     0|   none  |
+        |des_dec_entry7_U0        |des_dec_entry7         |     0|     0|     0|     0|   none  |
+        |p_desDecrypt_c_line2_U0  |p_desDecrypt_c_line2   |     0|     0|     0|     0|   none  |
+        +-------------------------+-----------------------+------+------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
++-----------------+---------+-------+-------+-------+-----+
+|DSP              |        -|      -|      -|      -|    -|
+|Expression       |        -|      -|      0|     40|    -|
+|FIFO             |        0|      -|     50|    608|    -|
+|Instance         |        1|      -|   1532|   2754|    -|
+|Memory           |        2|      -|      0|      0|    0|
+|Multiplexer      |        -|      -|      -|     54|    -|
+|Register         |        -|      -|      6|      -|    -|
++-----------------+---------+-------+-------+-------+-----+
+|Total            |        3|      0|   1588|   3456|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Available        |      100|     90|  41600|  20800|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Utilization (%)  |        3|      0|      3|     16|    0|
++-----------------+---------+-------+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+-----------------------+---------+-------+-----+------+-----+
+    |         Instance        |         Module        | BRAM_18K| DSP48E|  FF |  LUT | URAM|
+    +-------------------------+-----------------------+---------+-------+-----+------+-----+
+    |Block_des_dec_exit2_U0   |Block_des_dec_exit2    |        0|      0|   66|    29|    0|
+    |Loop_3_proc_U0           |Loop_3_proc            |        0|      0|  277|   389|    0|
+    |Loop_5_proc_U0           |Loop_5_proc            |        0|      0|  216|   280|    0|
+    |Loop_Pipeline_loop4_U0   |Loop_Pipeline_loop4_s  |        1|      0|  475|  1421|    0|
+    |Loop_unroll1_proc_U0     |Loop_unroll1_proc      |        0|      0|  216|   289|    0|
+    |Loop_unroll2_proc_U0     |Loop_unroll2_proc      |        0|      0|  213|   288|    0|
+    |des_dec_entry7_U0        |des_dec_entry7         |        0|      0|    3|    38|    0|
+    |p_desDecrypt_c_line2_U0  |p_desDecrypt_c_line2   |        0|      0|   66|    20|    0|
+    +-------------------------+-----------------------+---------+-------+-----+------+-----+
+    |Total                    |                       |        1|      0| 1532|  2754|    0|
+    +-------------------------+-----------------------+---------+-------+-----+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +-----------+-----------------+---------+---+----+-----+------+-----+------+-------------+
+    |   Memory  |      Module     | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------+-----------------+---------+---+----+-----+------+-----+------+-------------+
+    |sub_key_U  |des_dec_sub_key  |        2|  0|   0|    0|    16|   64|     2|         2048|
+    +-----------+-----------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total      |                 |        2|  0|   0|    0|    16|   64|     2|         2048|
+    +-----------+-----------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    +-------------------------+---------+---+----+-----+------+-----+---------+
+    |           Name          | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +-------------------------+---------+---+----+-----+------+-----+---------+
+    |L_0_loc_channel_U        |        0|  5|   0|    -|     2|   32|       64|
+    |L_loc_channel_U          |        0|  5|   0|    -|     2|   32|       64|
+    |R_loc_channel_U          |        0|  5|   0|    -|     2|   32|       64|
+    |init_perm_res_0_loc_s_U  |        0|  5|   0|    -|     2|   64|      128|
+    |input_c_U                |        0|  5|   0|    -|     2|   64|      128|
+    |inv_init_perm_res_0_s_U  |        0|  5|   0|    -|     2|   64|      128|
+    |key_c_U                  |        0|  5|   0|    -|     2|   64|      128|
+    |permuted_choice_1_0_1_U  |        0|  5|   0|    -|     2|   60|      120|
+    |permuted_choice_1_0_s_U  |        0|  5|   0|    -|     2|   64|      128|
+    |temp_loc_channel_U       |        0|  5|   0|    -|     2|   32|       64|
+    +-------------------------+---------+---+----+-----+------+-----+---------+
+    |Total                    |        0| 50|   0|    0|    20|  508|     1016|
+    +-------------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+    |                Variable Name                | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+    |Block_des_dec_exit2_U0_ap_continue           |    and   |      0|  0|   2|           1|           1|
+    |Loop_3_proc_U0_ap_start                      |    and   |      0|  0|   2|           1|           1|
+    |Loop_5_proc_U0_ap_start                      |    and   |      0|  0|   2|           1|           1|
+    |Loop_Pipeline_loop4_U0_ap_continue           |    and   |      0|  0|   2|           1|           1|
+    |Loop_Pipeline_loop4_U0_ap_start              |    and   |      0|  0|   2|           1|           1|
+    |Loop_unroll2_proc_U0_ap_continue             |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_L_0_loc_channel              |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_L_loc_channel                |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_R_loc_channel                |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_permuted_choice_1_0_1        |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_permuted_choice_1_0_s        |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_temp_loc_channel             |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                                      |    and   |      0|  0|   2|           1|           1|
+    |des_dec_entry7_U0_start_full_n               |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_L_0_loc_channel        |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_L_loc_channel          |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_R_loc_channel          |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_permuted_choice_1_0_1  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_permuted_choice_1_0_s  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_temp_loc_channel       |    or    |      0|  0|   2|           1|           1|
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                        |          |      0|  0|  40|          20|          20|
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                      | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_L_0_loc_channel        |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_L_loc_channel          |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_R_loc_channel          |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_permuted_choice_1_0_1  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_permuted_choice_1_0_s  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_temp_loc_channel       |   9|          2|    1|          2|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                            |  54|         12|    6|         12|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------+---+----+-----+-----------+
+    |                       Name                      | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_L_0_loc_channel        |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_L_loc_channel          |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_R_loc_channel          |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_permuted_choice_1_0_1  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_permuted_choice_1_0_s  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_temp_loc_channel       |  1|   0|    1|          0|
+    +-------------------------------------------------+---+----+-----+-----------+
+    |Total                                            |  6|   0|    6|          0|
+    +-------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+--------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------+-----+-----+------------+--------------+--------------+
+|ap_clk     |  in |    1| ap_ctrl_hs |    des_dec   | return value |
+|ap_rst     |  in |    1| ap_ctrl_hs |    des_dec   | return value |
+|ap_start   |  in |    1| ap_ctrl_hs |    des_dec   | return value |
+|ap_return  | out |   64| ap_ctrl_hs |    des_dec   | return value |
+|ap_done    | out |    1| ap_ctrl_hs |    des_dec   | return value |
+|ap_ready   | out |    1| ap_ctrl_hs |    des_dec   | return value |
+|ap_idle    | out |    1| ap_ctrl_hs |    des_dec   | return value |
+|input_r    |  in |   64|   ap_none  |    input_r   |    scalar    |
+|key        |  in |   64|   ap_none  |      key     |    scalar    |
++-----------+-----+-----+------------+--------------+--------------+
+
